@@ -29,8 +29,8 @@ export default function Footer() {
     <footer
       className="pt-16 pb-8 px-6"
       style={{
-        backgroundColor: "#080808",
-        borderTop: "1px solid #222222",
+        backgroundColor: "#090A0C",
+        borderTop: "1px solid #1E2023",
       }}
     >
       <div className="max-w-7xl mx-auto">
@@ -40,11 +40,11 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="text-[#f0ede8] font-bold text-xl tracking-tight block mb-3"
+              className="text-[#EDEBE6] font-bold text-xl tracking-tight block mb-3"
             >
               AutoFlow
             </Link>
-            <p className="text-[#888888] text-sm leading-relaxed max-w-xs">
+            <p className="text-[#5C5C5C] text-sm leading-relaxed max-w-xs">
               Building the Infrastructure of the Autonomous Economy.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Footer() {
             <div key={col.title}>
               <p
                 className="text-[10px] font-semibold tracking-widest uppercase mb-4"
-                style={{ color: "#888888" }}
+                style={{ color: "#5C5C5C" }}
               >
                 {col.title}
               </p>
@@ -63,7 +63,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-[#bbbbbb] text-sm hover:text-[#f0ede8] transition-colors duration-150"
+                      className="text-[#9B9B9B] text-sm hover:text-[#EDEBE6] transition-colors duration-150"
                     >
                       {link.label}
                     </Link>
@@ -77,12 +77,12 @@ export default function Footer() {
         {/* Contact row */}
         <div
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-8"
-          style={{ borderTop: "1px solid #222222" }}
+          style={{ borderTop: "1px solid #1E2023" }}
         >
           <div className="flex items-center gap-6">
             <a
               href="mailto:hello@autoflow.ai"
-              className="text-[#bbbbbb] text-sm hover:text-[#f0ede8] transition-colors"
+              className="text-[#9B9B9B] text-sm hover:text-[#EDEBE6] transition-colors"
             >
               hello@autoflow.ai
             </a>
@@ -90,7 +90,7 @@ export default function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#bbbbbb] text-sm hover:text-[#f0ede8] transition-colors"
+              className="text-[#9B9B9B] text-sm hover:text-[#EDEBE6] transition-colors"
             >
               LinkedIn
             </a>
@@ -98,14 +98,14 @@ export default function Footer() {
               href="https://x.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#bbbbbb] text-sm hover:text-[#f0ede8] transition-colors"
+              className="text-[#9B9B9B] text-sm hover:text-[#EDEBE6] transition-colors"
             >
               X / Twitter
             </a>
           </div>
           <Link
             href="/book"
-            className="px-5 py-2 bg-[#cc2200] text-[#f0ede8] text-sm font-medium rounded hover:bg-[#e02800] transition-colors duration-150"
+            className="px-5 py-2 bg-[#C41E00] text-[#EDEBE6] text-sm font-medium rounded hover:bg-[#E02200] transition-colors duration-150"
           >
             Book a Call
           </Link>
@@ -114,12 +114,12 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-6"
-          style={{ borderTop: "1px solid #222222" }}
+          style={{ borderTop: "1px solid #1E2023" }}
         >
-          <p className="text-[#888888] text-xs">
+          <p className="text-[#5C5C5C] text-xs">
             © 2025 AutoFlow. All rights reserved.
           </p>
-          <p className="text-[#888888] text-xs">
+          <p className="text-[#5C5C5C] text-xs">
             Karachi, Pakistan · Building globally.
           </p>
         </div>

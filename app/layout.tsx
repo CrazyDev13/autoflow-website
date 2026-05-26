@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full`} data-scroll-behavior="smooth">
-      <body className="min-h-full w-full flex flex-col bg-[#080808] text-[#f0ede8]">
+      <body className="min-h-full w-full flex flex-col bg-[#090A0C] text-[#EDEBE6]">
         <Nav />
         <main className="flex-1 w-full pt-16 pb-20 md:pb-0">{children}</main>
       </body>

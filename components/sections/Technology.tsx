@@ -3,24 +3,34 @@ import SectionLabel from "@/components/ui/SectionLabel";
 
 const pillars = [
   {
-    name: "Deterministic Execution",
-    snippet: "// Same input → same output. Always.",
-    body: "C++ compiles to native machine code. No interpreter. No runtime. Given the same input, the output is always identical.",
+    num: "01",
+    label: "Deterministic Execution",
+    line: "Same input, same output — mathematically guaranteed.",
   },
   {
-    name: "Mathematical Verification",
-    snippet: "// Every AI output is a hypothesis.",
-    body: "Every AI output is a hypothesis. Our verification layer either proves it or rejects it before execution. No unvalidated AI decisions reach your business processes.",
+    num: "02",
+    label: "Mathematical Verification",
+    line: "Every AI output is a hypothesis that must be proven before execution.",
   },
   {
-    name: "Full Audit Trail",
-    snippet: "// Input → Output → Proof.",
-    body: "Every decision is logged — input state, AI response, verification result, execution output. Reproducible for any regulator, any time.",
+    num: "03",
+    label: "Full Audit Trail",
+    line: "Every decision logged: input, output, proof. Regulator-ready.",
   },
   {
-    name: "Zero Garbage Collection",
-    snippet: "// No GC pauses. No runtime overhead.",
-    body: "Manual memory management in C++ eliminates the micro-pauses that make Python and Node.js unsuitable for mission-critical systems. Microsecond-level latency. Consistent under any load.",
+    num: "04",
+    label: "Zero GC Pauses",
+    line: "Manual C++ memory management. Microsecond latency. No overhead.",
+  },
+  {
+    num: "05",
+    label: "EU AI Act Ready",
+    line: "Explainability and audit trail built in — not bolted on.",
+  },
+  {
+    num: "06",
+    label: "Self-Hosted Deploy",
+    line: "Runs inside your infrastructure. Your data never leaves.",
   },
 ];
 
@@ -28,58 +38,47 @@ export default function Technology() {
   return (
     <section
       className="py-28 px-6"
-      style={{ backgroundColor: "#080808" }}
+      style={{ backgroundColor: "#090A0C" }}
     >
       <div className="max-w-5xl mx-auto">
         <FadeIn>
           <SectionLabel>Technology</SectionLabel>
           <h2
-            className="font-bold text-[#f0ede8] leading-tight mb-4 max-w-3xl"
+            className="font-bold text-[#EDEBE6] leading-tight mb-4 max-w-3xl"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             Built on C++.
             <br />
-            Not because it is harder.
-            <br />
-            Because it is the only way.
+            The only way to guarantee it.
           </h2>
-          <p
-            className="text-[#bbbbbb] mb-16 max-w-xl"
-            style={{ fontSize: "17px", lineHeight: "1.65" }}
-          >
-            The infrastructure underneath every AutoFlow product is written in
-            C++. That choice is not academic — it is what makes the guarantee
-            possible.
-          </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px mt-16"
+          style={{ backgroundColor: "#1E2023" }}
+        >
           {pillars.map((pillar, i) => (
-            <FadeIn key={i} delay={i * 0.08}>
+            <FadeIn key={i} delay={i * 0.06}>
               <div
-                className="p-8 rounded h-full"
-                style={{
-                  backgroundColor: "#111111",
-                  border: "1px solid #222222",
-                }}
+                className="p-7 flex flex-col gap-3"
+                style={{ backgroundColor: "#090A0C" }}
               >
-                <p
-                  className="font-mono mb-4"
-                  style={{ fontSize: "12px", color: "#444444" }}
+                <span
+                  className="font-mono font-bold"
+                  style={{ fontSize: "11px", color: "#C41E00" }}
                 >
-                  {pillar.snippet}
-                </p>
+                  {pillar.num}
+                </span>
                 <h3
-                  className="font-bold text-[#f0ede8] mb-3"
-                  style={{ fontSize: "19px" }}
+                  className="font-bold text-[#EDEBE6]"
+                  style={{ fontSize: "17px", lineHeight: "1.2" }}
                 >
-                  {pillar.name}
+                  {pillar.label}
                 </h3>
                 <p
-                  className="text-[#bbbbbb]"
-                  style={{ fontSize: "16px", lineHeight: "1.65" }}
+                  className="text-[#9B9B9B]"
+                  style={{ fontSize: "14px", lineHeight: "1.55" }}
                 >
-                  {pillar.body}
+                  {pillar.line}
                 </p>
               </div>
             </FadeIn>

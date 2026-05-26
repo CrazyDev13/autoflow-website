@@ -25,11 +25,11 @@ export default function Button({
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "px-6 py-3 bg-[#cc2200] text-[#f0ede8] hover:bg-[#e02800]",
+      "px-6 py-3 bg-[#C41E00] text-[#EDEBE6] hover:bg-[#E02200]",
     secondary:
-      "px-6 py-3 border border-[#222222] text-[#f0ede8] hover:border-[#444444] hover:text-white",
+      "px-6 py-3 border border-[#1E2023] text-[#EDEBE6] hover:border-[#2A2D32] hover:text-[#EDEBE6]",
     ghost:
-      "px-2 py-1 text-[#d4830a] hover:text-[#e8960d] underline-offset-4",
+      "px-2 py-1 text-[#C9860A] hover:text-[#D4580A] underline-offset-4",
   };
 
   const classes = `${base} ${variants[variant]} ${widthClass} ${className}`;

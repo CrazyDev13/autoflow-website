@@ -11,13 +11,13 @@ export default function Company() {
   return (
     <section
       className="py-28 px-6"
-      style={{ backgroundColor: "#111111" }}
+      style={{ backgroundColor: "#0F1012" }}
     >
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <SectionLabel>Company</SectionLabel>
           <h2
-            className="font-bold text-[#f0ede8] leading-tight mb-12"
+            className="font-bold text-[#EDEBE6] leading-tight mb-12"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             Who Is Building This
@@ -28,10 +28,10 @@ export default function Company() {
         <FadeIn delay={0.1}>
           <div
             className="p-10 rounded mb-12"
-            style={{ backgroundColor: "#161616", border: "1px solid #222222" }}
+            style={{ backgroundColor: "#141416", border: "1px solid #1E2023" }}
           >
             <p
-              className="text-[#f0ede8] leading-relaxed mb-6"
+              className="text-[#EDEBE6] leading-relaxed mb-6"
               style={{ fontSize: "clamp(17px, 2vw, 20px)", lineHeight: "1.7" }}
             >
               I started AutoFlow at 17 because I kept watching companies lose
@@ -39,7 +39,7 @@ export default function Company() {
               execution was not. So we built it.
             </p>
             <p
-              className="text-[#bbbbbb] leading-relaxed mb-6"
+              className="text-[#9B9B9B] leading-relaxed mb-6"
               style={{ fontSize: "17px", lineHeight: "1.65" }}
             >
               We are not waiting for permission or perfect conditions. The people
@@ -49,16 +49,16 @@ export default function Company() {
               it, not a cap table.
             </p>
             <p
-              className="text-[#bbbbbb] leading-relaxed"
+              className="text-[#9B9B9B] leading-relaxed"
               style={{ fontSize: "17px", lineHeight: "1.65" }}
             >
               The problem we are solving has not been solved. The regulatory
               window is closing. We intend to be the infrastructure underneath
               every trustworthy AI system in the next decade.
             </p>
-            <div className="mt-8 pt-8" style={{ borderTop: "1px solid #222222" }}>
-              <p className="font-bold text-[#f0ede8]">Abdullah</p>
-              <p className="text-[#888888] text-sm">Founder & CEO, AutoFlow</p>
+            <div className="mt-8 pt-8" style={{ borderTop: "1px solid #1E2023" }}>
+              <p className="font-bold text-[#EDEBE6]">Abdullah</p>
+              <p className="text-[#5C5C5C] text-sm">Founder & CEO, AutoFlow</p>
             </div>
           </div>
         </FadeIn>
@@ -70,11 +70,11 @@ export default function Company() {
               <div
                 key={i}
                 className="p-6 rounded"
-                style={{ backgroundColor: "#161616", border: "1px solid #222222" }}
+                style={{ backgroundColor: "#141416", border: "1px solid #1E2023" }}
               >
-                <p className="font-bold text-[#f0ede8] mb-1">{member.name}</p>
-                <p className="text-[#e05c00] text-sm mb-2">{member.role}</p>
-                <p className="text-[#888888] text-sm">{member.note}</p>
+                <p className="font-bold text-[#EDEBE6] mb-1">{member.name}</p>
+                <p className="text-[#D4580A] text-sm mb-2">{member.role}</p>
+                <p className="text-[#5C5C5C] text-sm">{member.note}</p>
               </div>
             ))}
           </div>
@@ -85,7 +85,7 @@ export default function Company() {
           <div>
             <p
               className="text-[10px] font-semibold tracking-widest uppercase mb-4"
-              style={{ color: "#d4830a" }}
+              style={{ color: "#C9860A" }}
             >
               We are hiring
             </p>
@@ -95,10 +95,10 @@ export default function Company() {
                   key={i}
                   href="/careers"
                   className="flex items-center justify-between p-4 rounded group"
-                  style={{ backgroundColor: "#161616", border: "1px solid #222222" }}
+                  style={{ backgroundColor: "#141416", border: "1px solid #1E2023" }}
                 >
-                  <span className="text-[#f0ede8] font-medium">{role}</span>
-                  <span className="text-[#d4830a] group-hover:text-[#e8960d] transition-colors">→</span>
+                  <span className="text-[#EDEBE6] font-medium">{role}</span>
+                  <span className="text-[#C9860A] group-hover:text-[#D4580A] transition-colors">→</span>
                 </a>
               ))}
             </div>

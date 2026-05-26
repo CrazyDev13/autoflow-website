@@ -33,21 +33,21 @@ export default function Thesis() {
   return (
     <section
       className="py-28 px-6"
-      style={{ backgroundColor: "#080808" }}
+      style={{ backgroundColor: "#090A0C" }}
     >
       <div className="max-w-5xl mx-auto">
         <FadeIn>
           <SectionLabel>The AutoFlow Thesis</SectionLabel>
           <h2
-            className="font-bold text-[#f0ede8] leading-tight mb-4 max-w-3xl"
+            className="font-bold text-[#EDEBE6] leading-tight mb-4 max-w-3xl"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             You do not need to replace the AI model.
             <br />
-            <span style={{ color: "#cc2200" }}>You need to cage it.</span>
+            <span style={{ color: "#C41E00" }}>You need to cage it.</span>
           </h2>
           <p
-            className="text-[#bbbbbb] mb-16 max-w-2xl"
+            className="text-[#9B9B9B] mb-16 max-w-2xl"
             style={{ fontSize: "17px", lineHeight: "1.65" }}
           >
             {"AutoFlow's answer is a C++ execution engine that sits between the AI model and the real-world action. Every AI output is treated as a hypothesis — not a decision — until it passes mathematical verification."}
@@ -59,7 +59,7 @@ export default function Thesis() {
           {/* Connecting line — hidden on mobile */}
           <div
             className="hidden md:block absolute left-[2.75rem] top-10 bottom-10 w-px"
-            style={{ backgroundColor: "#222222" }}
+            style={{ backgroundColor: "#1E2023" }}
           />
 
           <div className="flex flex-col gap-0">
@@ -70,9 +70,9 @@ export default function Thesis() {
                   <div
                     className="relative z-10 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
                     style={{
-                      backgroundColor: layer.highlight ? "#cc2200" : "#161616",
-                      border: `1px solid ${layer.highlight ? "#cc2200" : "#222222"}`,
-                      color: "#f0ede8",
+                      backgroundColor: layer.highlight ? "#C41E00" : "#141416",
+                      border: `1px solid ${layer.highlight ? "#C41E00" : "#1E2023"}`,
+                      color: "#EDEBE6",
                     }}
                   >
                     {layer.num}
@@ -82,29 +82,29 @@ export default function Thesis() {
                   <div
                     className="flex-1 p-6 rounded"
                     style={{
-                      backgroundColor: layer.highlight ? "#1a0a08" : "#111111",
-                      border: `1px solid ${layer.highlight ? "#cc2200" : "#222222"}`,
+                      backgroundColor: layer.highlight ? "#180806" : "#0F1012",
+                      border: `1px solid ${layer.highlight ? "#C41E00" : "#1E2023"}`,
                     }}
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <span
                         className="text-xs font-semibold tracking-widest uppercase px-2 py-0.5 rounded"
                         style={{
-                          backgroundColor: layer.highlight ? "#cc2200" : "#222222",
-                          color: layer.highlight ? "#f0ede8" : "#888888",
+                          backgroundColor: layer.highlight ? "#C41E00" : "#1E2023",
+                          color: layer.highlight ? "#EDEBE6" : "#5C5C5C",
                         }}
                       >
                         {layer.tag}
                       </span>
                       <h3
-                        className="font-bold text-[#f0ede8]"
+                        className="font-bold text-[#EDEBE6]"
                         style={{ fontSize: "17px" }}
                       >
                         {layer.name}
                       </h3>
                     </div>
                     <p
-                      className="text-[#bbbbbb]"
+                      className="text-[#9B9B9B]"
                       style={{ fontSize: "16px", lineHeight: "1.6" }}
                     >
                       {layer.desc}
@@ -120,15 +120,15 @@ export default function Thesis() {
         <FadeIn delay={0.4}>
           <div
             className="mt-8 p-8 rounded text-center"
-            style={{ backgroundColor: "#111111", border: "1px solid #222222" }}
+            style={{ backgroundColor: "#0F1012", border: "1px solid #1E2023" }}
           >
             <p
-              className="font-bold text-[#f0ede8] mb-2"
+              className="font-bold text-[#EDEBE6] mb-2"
               style={{ fontSize: "clamp(18px, 2.5vw, 24px)" }}
             >
               Given the same input and the same rules — always the same output.
             </p>
-            <p className="text-[#888888] text-base">
+            <p className="text-[#5C5C5C] text-base">
               That is the mathematical guarantee Python cannot provide.
             </p>
           </div>

@@ -8,7 +8,7 @@ export default function SectionLabel({
   color = "orange",
 }: SectionLabelProps) {
   const colorClass =
-    color === "orange" ? "text-[#e05c00]" : "text-[#888888]";
+    color === "orange" ? "text-[#D4580A]" : "text-[#5C5C5C]";
 
   return (
     <p

@@ -1,178 +1,210 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
     <section
-      className="relative w-full min-h-screen -mt-16 flex flex-col items-center justify-center px-6 text-center"
+      className="relative w-full min-h-[100dvh] -mt-16 flex flex-col items-center justify-start pt-32 md:pt-40 px-6 text-center overflow-hidden"
       style={{ backgroundColor: "#090A0C" }}
     >
-      {/* Radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 50% at 50% 40%, rgba(196,30,0,0.07) 0%, transparent 70%)",
-        }}
-      />
+      {/* Background gradient orbs - huly.io style */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Top center glow */}
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full blur-[120px]"
+          style={{ background: "radial-gradient(circle, rgba(196,30,0,0.15) 0%, transparent 70%)" }}
+        />
+        {/* Bottom right glow */}
+        <div
+          className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[100px]"
+          style={{ background: "radial-gradient(circle, rgba(212,88,10,0.1) 0%, transparent 70%)" }}
+        />
+        {/* Bottom left glow */}
+        <div
+          className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[80px]"
+          style={{ background: "radial-gradient(circle, rgba(201,134,10,0.08) 0%, transparent 70%)" }}
+        />
+      </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto w-full">
-        {/* Eyebrow */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        {/* Eyebrow badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#D4580A] mb-8"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-8"
         >
-          The Trust Infrastructure for the AI Era
-        </motion.p>
+          <span
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-semibold tracking-wider uppercase border"
+            style={{
+              backgroundColor: "rgba(196,30,0,0.1)",
+              borderColor: "rgba(196,30,0,0.3)",
+              color: "#D4580A",
+            }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C41E00] animate-pulse" />
+            The Trust Infrastructure for the AI Era
+          </span>
+        </motion.div>
 
-        {/* Headline */}
+        {/* Main Headline - huly.io style massive typography */}
         <motion.h1
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-bold leading-[1.08] tracking-tight text-[#EDEBE6] mb-5"
-          style={{ fontSize: "clamp(44px, 8vw, 112px)" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="font-bold tracking-tight mb-6 leading-[0.95]"
+          style={{ fontSize: "clamp(48px, 10vw, 128px)" }}
         >
-          AI That Enterprises
-          <br />
-          Can Actually Trust.
+          <span
+            className="block"
+            style={{
+              background: "linear-gradient(180deg, #EDEBE6 0%, #9B9B9B 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            AI That Enterprises
+          </span>
+          <span
+            className="block mt-2"
+            style={{
+              background: "linear-gradient(90deg, #C41E00 0%, #D4580A 50%, #C9860A 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Can Actually Trust.
+          </span>
         </motion.h1>
 
-        {/* Single sub-line — max 15 words */}
+        {/* Subheadline */}
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.32 }}
-          className="text-[#9B9B9B] mb-10 mx-auto"
-          style={{ fontSize: "clamp(16px, 1.8vw, 20px)" }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="text-[#9B9B9B] mb-10 mx-auto max-w-2xl"
+          style={{ fontSize: "clamp(17px, 2vw, 22px)", lineHeight: "1.5" }}
         >
           Deterministic execution. Full audit trail. EU AI Act ready.
+          <br className="hidden sm:block" />
+          <span style={{ color: "#5C5C5C" }}>C++ verification layer for enterprise AI agents.</span>
         </motion.p>
 
-        {/* CTA */}
+        {/* CTA Group - huly.io style */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.45 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
+          {/* Primary CTA with glow */}
           <Link
             href="/book"
-            className="w-full sm:w-auto px-8 py-4 bg-[#C41E00] text-[#EDEBE6] font-medium rounded hover:bg-[#E02200] transition-colors duration-150 text-base"
+            className="group relative w-full sm:w-auto px-8 py-4 font-medium rounded-lg overflow-hidden transition-all duration-300"
+            style={{
+              backgroundColor: "#C41E00",
+              color: "#EDEBE6",
+              boxShadow: "0 0 30px rgba(196, 30, 0, 0.3), 0 4px 20px rgba(196, 30, 0, 0.2)",
+            }}
           >
-            Book a Pilot Call
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              Book a Pilot Call
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-0.5">
+                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
           </Link>
+
+          {/* Secondary CTA */}
           <Link
             href="/research"
-            className="text-[#C9860A] text-base hover:text-[#D4580A] transition-colors duration-150"
+            className="w-full sm:w-auto px-6 py-4 font-medium rounded-lg border transition-all duration-300 hover:bg-white/5"
+            style={{
+              borderColor: "#2A2D32",
+              color: "#9B9B9B",
+            }}
           >
-            Read the Thesis →
+            Read the Thesis
           </Link>
         </motion.div>
 
-        {/* Architecture diagram */}
+        {/* Architecture Diagram with perspective - huly style */}
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.65 }}
-          className="w-full max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 60, rotateX: 15 }}
+          animate={{ opacity: 1, y: 0, rotateX: 0 }}
+          transition={{ duration: 1, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full max-w-5xl mx-auto"
+          style={{ perspective: "1000px" }}
         >
+          {/* Glow behind diagram */}
           <div
-            className="rounded-lg overflow-hidden"
-            style={{ border: "1px solid #1E2023", backgroundColor: "#0F1012" }}
+            className="absolute inset-0 blur-3xl -z-10"
+            style={{
+              background: "radial-gradient(ellipse at center, rgba(196,30,0,0.15) 0%, transparent 60%)",
+              transform: "translateY(20%)",
+            }}
+          />
+
+          <div
+            className="relative w-full rounded-xl overflow-hidden border"
+            style={{
+              aspectRatio: "680/780",
+              borderColor: "#1E2023",
+              backgroundColor: "rgba(15, 16, 18, 0.6)",
+              backdropFilter: "blur(10px)",
+              boxShadow: "0 25px 80px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03) inset",
+            }}
           >
-            {/* Diagram header bar */}
-            <div
-              className="flex items-center gap-2 px-4 py-3"
-              style={{ borderBottom: "1px solid #1E2023" }}
-            >
-              <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#C41E00", opacity: 0.7 }} />
-              <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#C9860A", opacity: 0.5 }} />
-              <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#1E2023" }} />
-              <span className="ml-2 text-[11px] font-mono text-[#5C5C5C]">autoflow — execution engine</span>
-            </div>
+            {/* Corner accents */}
+            <div className="absolute top-0 left-0 w-20 h-px bg-gradient-to-r from-[#C41E00] to-transparent" />
+            <div className="absolute top-0 left-0 w-px h-20 bg-gradient-to-b from-[#C41E00] to-transparent" />
+            <div className="absolute top-0 right-0 w-20 h-px bg-gradient-to-l from-[#D4580A] to-transparent" />
+            <div className="absolute top-0 right-0 w-px h-20 bg-gradient-to-b from-[#D4580A] to-transparent" />
 
-            {/* Diagram body */}
-            <div className="px-6 py-8 flex flex-col gap-3">
-              {/* Row 1: input */}
-              <div className="flex items-center gap-3">
-                <div
-                  className="flex-1 flex items-center gap-3 px-4 py-3 rounded text-left"
-                  style={{ backgroundColor: "#141416", border: "1px solid #1E2023" }}
-                >
-                  <span className="text-[11px] font-mono text-[#5C5C5C] w-16 shrink-0">INPUT</span>
-                  <span className="text-[13px] text-[#9B9B9B]">AI model output (probabilistic)</span>
-                </div>
-              </div>
+            <Image
+              src="/autoflow_architecture.svg"
+              alt="AutoFlow 4-Layer Deterministic Architecture"
+              fill
+              className="object-contain p-4"
+              priority
+            />
+          </div>
+        </motion.div>
 
-              {/* Arrow */}
-              <div className="flex justify-center">
-                <span className="text-[#2A2D32] text-lg font-light">↓</span>
-              </div>
-
-              {/* Row 2: verification — highlighted */}
-              <div
-                className="flex items-center gap-3 px-4 py-3 rounded"
-                style={{ backgroundColor: "#180806", border: "1px solid #C41E00" }}
-              >
-                <span className="text-[11px] font-mono w-16 shrink-0" style={{ color: "#C41E00" }}>VERIFY</span>
-                <span className="text-[13px] text-[#EDEBE6] font-medium">C++ Mathematical Verification Layer</span>
-                <span className="ml-auto text-[11px] font-mono text-[#C41E00]">AutoFlow</span>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center gap-16">
-                <div className="flex flex-col items-center gap-1">
-                  <span className="text-[#2A2D32] text-lg font-light">↓</span>
-                  <span className="text-[10px] text-[#D4580A] font-mono">PASS</span>
-                </div>
-                <div className="flex flex-col items-center gap-1">
-                  <span className="text-[#2A2D32] text-lg font-light">↓</span>
-                  <span className="text-[10px] text-[#5C5C5C] font-mono">FAIL</span>
-                </div>
-              </div>
-
-              {/* Row 3: outcomes */}
-              <div className="grid grid-cols-2 gap-3">
-                <div
-                  className="px-4 py-3 rounded text-left"
-                  style={{ backgroundColor: "#141416", border: "1px solid #1E2023" }}
-                >
-                  <span className="text-[11px] font-mono text-[#D4580A] block mb-1">EXECUTE</span>
-                  <span className="text-[12px] text-[#9B9B9B]">Deterministic action + full audit log</span>
-                </div>
-                <div
-                  className="px-4 py-3 rounded text-left"
-                  style={{ backgroundColor: "#141416", border: "1px solid #1E2023" }}
-                >
-                  <span className="text-[11px] font-mono text-[#5C5C5C] block mb-1">REJECT</span>
-                  <span className="text-[12px] text-[#9B9B9B]">Escalate to human + log reason</span>
-                </div>
-              </div>
-            </div>
+        {/* Trust badges - huly style */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-[#5C5C5C] text-xs"
+        >
+          <div className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2L9.5 6H14L10.5 8.5L12 13L8 10.5L4 13L5.5 8.5L2 6H6.5L8 2Z" fill="#C9860A" fillOpacity="0.5"/>
+            </svg>
+            <span>Deterministic by Design</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2a6 6 0 0 1 6 6c0 3.31-2.69 6-6 6s-6-2.69-6-6a6 6 0 0 1 6-6zm0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" fill="#C41E00" fillOpacity="0.5"/>
+              <path d="M7 7h2v4H7V7z" fill="#C41E00"/>
+            </svg>
+            <span>Full Audit Trail</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="2" y="6" width="12" height="8" rx="1" stroke="#D4580A" strokeWidth="1.5" strokeOpacity="0.5"/>
+              <path d="M5 6V4a3 3 0 0 1 6 0v2" stroke="#D4580A" strokeWidth="1.5" strokeOpacity="0.5"/>
+            </svg>
+            <span>EU AI Act Compliant</span>
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
-      >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <ChevronDown size={20} className="text-[#5C5C5C]" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

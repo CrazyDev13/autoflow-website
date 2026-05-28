@@ -1,0 +1,92 @@
+<svg width="680" height="780" viewBox="0 0 680 780" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>AutoFlow 4-Layer Deterministic Architecture</title>
+  <desc>AutoFlow's four-layer deterministic AI execution architecture</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="780" fill="#090A0C"/>
+
+  <!-- EYEBROW -->
+  <text x="340" y="30" text-anchor="middle" fill="#C9860A" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3">AUTOFLOW ARCHITECTURE</text>
+
+  <!-- LAYER 1 — C++ Context Ingestion -->
+  <rect x="60" y="50" width="560" height="100" rx="8" fill="#1A1C1F" stroke="#2A2D32" stroke-width="1"/>
+  <text x="88" y="80" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">LAYER 1</text>
+  <text x="88" y="102" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="14" font-weight="700">C++ Context Ingestion</text>
+  <text x="88" y="122" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">Prospect data · Business rules · Compliance constraints · Prior decisions</text>
+  <text x="88" y="140" fill="#5C5C5C" font-family="Arial, sans-serif" font-size="12">Fully deterministic · No randomness · No interpretation overhead</text>
+  <rect x="522" y="68" width="78" height="26" rx="4" fill="none" stroke="#C9860A" stroke-width="0.8" opacity="0.6"/>
+  <text x="561" y="85" text-anchor="middle" fill="#C9860A" font-family="Arial, sans-serif" font-size="11" font-weight="700">C++</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="340" y1="150" x2="340" y2="188" stroke="#C41E00" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="358" y="173" fill="#C41E00" font-family="Arial, sans-serif" font-size="11" opacity="0.8">structured input</text>
+
+  <!-- LAYER 2 — LLM Intelligence -->
+  <rect x="60" y="190" width="560" height="100" rx="8" fill="#1F1A0E" stroke="#3D3010" stroke-width="1"/>
+  <text x="88" y="220" fill="#BA7517" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">LAYER 2</text>
+  <text x="88" y="242" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="14" font-weight="700">LLM Intelligence</text>
+  <text x="88" y="262" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">Pattern recognition · Intent classification · Content generation</text>
+  <text x="88" y="280" fill="#5C5C5C" font-family="Arial, sans-serif" font-size="12">The only probabilistic step · Tightly constrained prompt space</text>
+  <rect x="458" y="210" width="142" height="26" rx="4" fill="none" stroke="#BA7517" stroke-width="0.8" opacity="0.6"/>
+  <text x="529" y="227" text-anchor="middle" fill="#BA7517" font-family="Arial, sans-serif" font-size="11" font-weight="700">PROBABILISTIC</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="340" y1="290" x2="340" y2="328" stroke="#C41E00" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="358" y="313" fill="#C41E00" font-family="Arial, sans-serif" font-size="11" opacity="0.8">hypothesis output</text>
+
+  <!-- LAYER 3 — Mathematical Verification -->
+  <rect x="60" y="330" width="560" height="130" rx="8" fill="#1F0E0E" stroke="#4A1515" stroke-width="1"/>
+  <text x="88" y="360" fill="#CC4444" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">LAYER 3  ·  THE CORE</text>
+  <text x="88" y="382" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="14" font-weight="700">C++ Mathematical Verification</text>
+
+  <rect x="88"  y="398" width="112" height="42" rx="5" fill="none" stroke="#993C1D" stroke-width="0.6" opacity="0.7"/>
+  <rect x="212" y="398" width="112" height="42" rx="5" fill="none" stroke="#993C1D" stroke-width="0.6" opacity="0.7"/>
+  <rect x="336" y="398" width="112" height="42" rx="5" fill="none" stroke="#993C1D" stroke-width="0.6" opacity="0.7"/>
+  <rect x="460" y="398" width="130" height="42" rx="5" fill="none" stroke="#993C1D" stroke-width="0.6" opacity="0.7"/>
+
+  <text x="144" y="416" text-anchor="middle" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="12" font-weight="700">Consistency</text>
+  <text x="144" y="432" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="11">vs prior decisions</text>
+  <text x="268" y="416" text-anchor="middle" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="12" font-weight="700">Confidence</text>
+  <text x="268" y="432" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="11">within bounds</text>
+  <text x="392" y="416" text-anchor="middle" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="12" font-weight="700">Compliance</text>
+  <text x="392" y="432" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="11">rules enforced</text>
+  <text x="525" y="416" text-anchor="middle" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="12" font-weight="700">Reproducibility</text>
+  <text x="525" y="432" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="11">same in → same out</text>
+
+  <!-- FAIL branch -->
+  <line x1="620" y1="395" x2="650" y2="395" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="650" y1="395" x2="650" y2="490" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="656" y="442" fill="#E24B4A" font-family="Arial, sans-serif" font-size="11">FAIL</text>
+  <text x="656" y="456" fill="#E24B4A" font-family="Arial, sans-serif" font-size="10" opacity="0.7">→ reject or</text>
+  <text x="656" y="469" fill="#E24B4A" font-family="Arial, sans-serif" font-size="10" opacity="0.7">human review</text>
+
+  <!-- Arrow 3→4 PASS -->
+  <line x1="340" y1="460" x2="340" y2="498" stroke="#1D9E75" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="358" y="483" fill="#1D9E75" font-family="Arial, sans-serif" font-size="11" font-weight="700">verified · PASS</text>
+
+  <!-- LAYER 4 — Execution & Logging -->
+  <rect x="60" y="500" width="560" height="100" rx="8" fill="#0D1F1A" stroke="#103D2E" stroke-width="1"/>
+  <text x="88" y="530" fill="#1D9E75" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">LAYER 4</text>
+  <text x="88" y="552" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="14" font-weight="700">C++ Execution &amp; Full Audit Log</text>
+  <text x="88" y="572" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">Native machine code · No interpreter · Microsecond latency · No GC pauses</text>
+  <text x="88" y="590" fill="#5C5C5C" font-family="Arial, sans-serif" font-size="12">Every decision logged: input state · LLM response · verification · output</text>
+  <rect x="522" y="518" width="78" height="26" rx="4" fill="none" stroke="#0F6E56" stroke-width="0.8" opacity="0.6"/>
+  <text x="561" y="535" text-anchor="middle" fill="#0F6E56" font-family="Arial, sans-serif" font-size="11" font-weight="700">C++</text>
+
+  <!-- Arrow 4 → output -->
+  <line x1="340" y1="600" x2="340" y2="638" stroke="#444444" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- OUTPUT node -->
+  <rect x="160" y="640" width="360" height="56" rx="8" fill="#1A1C1F" stroke="#2A2D32" stroke-width="1"/>
+  <text x="340" y="664" text-anchor="middle" fill="#EDEBE6" font-family="Arial, sans-serif" font-size="14" font-weight="700">Verified action executed</text>
+  <text x="340" y="682" text-anchor="middle" fill="#5C5C5C" font-family="Arial, sans-serif" font-size="11">Route warm lead · Send message · Update record · Trigger workflow</text>
+
+  <!-- Bottom guarantee line -->
+  <line x1="60" y1="742" x2="620" y2="742" stroke="#2A2D32" stroke-width="0.5"/>
+  <text x="340" y="762" text-anchor="middle" fill="#3A3A3A" font-family="Arial, sans-serif" font-size="11">Given the same input and verification rules — always the same output. That is the guarantee.</text>
+</svg>
